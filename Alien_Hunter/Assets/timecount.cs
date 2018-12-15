@@ -17,7 +17,7 @@ public class timecount : MonoBehaviour {
         int timeInt = 180 - (int)nowTime;
         Debug.Log("執行時間"+timeInt);
         s = timeInt.ToString();
-        text.text = "Time： " + s;
+        text.text = s;
         if (timeInt == 0)
             Application.LoadLevel(1);
     }

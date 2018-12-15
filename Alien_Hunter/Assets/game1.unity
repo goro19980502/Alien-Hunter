@@ -939,7 +939,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 412
+      value: 531
       objectReference: {fileID: 0}
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
@@ -5877,6 +5877,7 @@ GameObject:
   - component: {fileID: 296300597}
   - component: {fileID: 296300596}
   - component: {fileID: 296300595}
+  - component: {fileID: 296300598}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5897,7 +5898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TimeBar: {fileID: 1335418983}
   Text_Score: {fileID: 1524918762}
-  messageBehavior: {fileID: 0}
+  messageBehavior: {fileID: 296300598}
   Timer: 60
   RefMonster: {fileID: 1129266768098950, guid: fc6c0d3ae739d3d46aa4531a6daf746e, type: 2}
   RandomTimeMonster: {x: 3, y: 10}
@@ -5927,6 +5928,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &296300598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 296300594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59d0c3c7237efa245915a7703f964d12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MessagePanel: {fileID: 0}
 --- !u!1 &298715399
 GameObject:
   m_ObjectHideFlags: 0
@@ -9867,6 +9880,83 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53eb61ef65ddb854ba01962f03082315, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &603052216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 603052217}
+  - component: {fileID: 603052219}
+  - component: {fileID: 603052218}
+  m_Layer: 0
+  m_Name: Time_text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &603052217
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 603052216}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000031923886}
+  m_LocalScale: {x: 0.105344445, y: 0.105344445, z: 0.105344445}
+  m_Children: []
+  m_Father: {fileID: 705688162}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 4.19, y: 4.3}
+  m_SizeDelta: {x: 76, y: 16.12}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &603052218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 603052216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '0
+
+'
+--- !u!222 &603052219
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 603052216}
+  m_CullTransparentMesh: 0
 --- !u!1 &604570149
 GameObject:
   m_ObjectHideFlags: 0
@@ -11447,6 +11537,7 @@ RectTransform:
   - {fileID: 1335418981}
   - {fileID: 1936211536}
   - {fileID: 1524918761}
+  - {fileID: 603052217}
   m_Father: {fileID: 2026657384}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30364,7 +30455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTime: 0
-  text: {fileID: 2100311456}
+  text: {fileID: 603052218}
 --- !u!224 &1865615394
 RectTransform:
   m_ObjectHideFlags: 0
