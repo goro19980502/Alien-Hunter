@@ -1312,6 +1312,7 @@ MonoBehaviour:
   RefExplosion: {fileID: 1590470426960930, guid: c7156e0bc949e68478eaf6e1e0203bb6,
     type: 2}
   collider_Prop: {fileID: 65961734700607004}
+  HealthPoint: 1
 --- !u!135 &135700772707351074
 SphereCollider:
   m_ObjectHideFlags: 1

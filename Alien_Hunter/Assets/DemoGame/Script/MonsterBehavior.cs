@@ -21,9 +21,9 @@ public class MonsterBehavior : MonoBehaviour
     //最近停止距離值
     private float stopDestionation = 3.5f;
     //生命值
-    private int HealthPoint = 1;
+    public int HealthPoint = 1;
     //死亡布林值
-    private bool bDeath = false;
+    private bool bDeath = false;    
 
     //動畫Hash碼
     private static int state_Idle = Animator.StringToHash("Idle");
@@ -62,14 +62,14 @@ public class MonsterBehavior : MonoBehaviour
         //        Application.LoadLevel(1);
     }
     //被子彈打到發生碰撞-1
-    void OnCollisionEnter(Collision collision)
+    void OnColliderEnter(Collision collision)
     {
         Debug.Log("death");
- 
+
         OnDamage(1);
         Destroy(gameObject);
     }
-    
+
     void Update ()
     {
         Debug.Log("healthPoint"+HealthPoint);
@@ -84,7 +84,7 @@ public class MonsterBehavior : MonoBehaviour
             {
                 item.enabled = false;
             }
- //           animator.SetTrigger("Death");
+            animator.SetTrigger("Death");
             gameObject.SetActive(false);
             Destroy(this.gameObject);
         }
