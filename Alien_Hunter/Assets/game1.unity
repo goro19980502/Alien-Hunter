@@ -5902,7 +5902,6 @@ MonoBehaviour:
   countScore: {fileID: 1206480934}
   timecount: {fileID: 1865615393}
   Timer: 60
-  RefThinMonster: {fileID: 0}
   RefMonster: {fileID: 1129266768098950, guid: fc6c0d3ae739d3d46aa4531a6daf746e, type: 2}
   RandomTimeMonster: {x: 3, y: 10}
   RefTimerItem: {fileID: 0}
@@ -16574,49 +16573,59 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4304136567290860, guid: 2c9dea7e21c57804f8b76360c7425311, type: 2}
+    - target: {fileID: 4068240866809376, guid: 6c002cf119d65de45811acfef4427e31, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.07532191
+      value: 75
       objectReference: {fileID: 0}
-    - target: {fileID: 4304136567290860, guid: 2c9dea7e21c57804f8b76360c7425311, type: 2}
+    - target: {fileID: 4068240866809376, guid: 6c002cf119d65de45811acfef4427e31, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.5442777
+      value: 5.2
       objectReference: {fileID: 0}
-    - target: {fileID: 4304136567290860, guid: 2c9dea7e21c57804f8b76360c7425311, type: 2}
+    - target: {fileID: 4068240866809376, guid: 6c002cf119d65de45811acfef4427e31, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.00018596649
+      value: 118
       objectReference: {fileID: 0}
-    - target: {fileID: 4304136567290860, guid: 2c9dea7e21c57804f8b76360c7425311, type: 2}
+    - target: {fileID: 4068240866809376, guid: 6c002cf119d65de45811acfef4427e31, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4304136567290860, guid: 2c9dea7e21c57804f8b76360c7425311, type: 2}
+    - target: {fileID: 4068240866809376, guid: 6c002cf119d65de45811acfef4427e31, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4304136567290860, guid: 2c9dea7e21c57804f8b76360c7425311, type: 2}
+    - target: {fileID: 4068240866809376, guid: 6c002cf119d65de45811acfef4427e31, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4304136567290860, guid: 2c9dea7e21c57804f8b76360c7425311, type: 2}
+    - target: {fileID: 4068240866809376, guid: 6c002cf119d65de45811acfef4427e31, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4304136567290860, guid: 2c9dea7e21c57804f8b76360c7425311, type: 2}
+    - target: {fileID: 4068240866809376, guid: 6c002cf119d65de45811acfef4427e31, type: 2}
       propertyPath: m_RootOrder
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 114192387167180632, guid: 2c9dea7e21c57804f8b76360c7425311,
+    - target: {fileID: 114650654197578426, guid: 6c002cf119d65de45811acfef4427e31,
         type: 2}
       propertyPath: collider_Prop
       value: 
       objectReference: {fileID: 1444351527}
-    - target: {fileID: 1238688751386826, guid: 2c9dea7e21c57804f8b76360c7425311, type: 2}
+    - target: {fileID: 1555521435652190, guid: 6c002cf119d65de45811acfef4427e31, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114650654197578426, guid: 6c002cf119d65de45811acfef4427e31,
+        type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114924899502616560, guid: 6c002cf119d65de45811acfef4427e31,
+        type: 2}
+      propertyPath: Target
+      value: 
+      objectReference: {fileID: 102486687}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2c9dea7e21c57804f8b76360c7425311, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: 6c002cf119d65de45811acfef4427e31, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &991959336
 GameObject:
@@ -24853,7 +24862,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1129266768098950, guid: fc6c0d3ae739d3d46aa4531a6daf746e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc6c0d3ae739d3d46aa4531a6daf746e, type: 2}
