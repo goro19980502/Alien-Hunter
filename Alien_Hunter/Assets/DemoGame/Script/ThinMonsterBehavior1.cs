@@ -39,7 +39,7 @@ public class ThinMonsterBehavior1 : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         countScore = GameObject.Find("Score").GetComponent<CountScore>();
 
-        Target = GameObject.FindGameObjectWithTag("Player");
+//        Target = GameObject.FindGameObjectWithTag("Player");
 
         meshAgent.speed = Random.Range(2, 5);
         meshAgent.acceleration = Random.Range(6, 10);
@@ -52,7 +52,7 @@ public class ThinMonsterBehavior1 : MonoBehaviour
     {
         yield return new WaitForSeconds(3.0f);
         Instantiate(RefExplosion, transform.position, transform.rotation);
-        countScore.scoreCount(1);
+        countScore.scoreCount(5);
         gameObject.SetActive(false);
         Destroy(gameObject);
 
@@ -61,9 +61,9 @@ public class ThinMonsterBehavior1 : MonoBehaviour
     public void OnDamage(int Dmg)
     {
         HealthPoint -= Dmg;
-        //animator.SetTrigger("Death");
-        //       Destroy(this);
-        //        Application.LoadLevel(1);
+        animator.SetTrigger("Death");
+               Destroy(this);
+                Application.LoadLevel(1);
     }
     //被子彈打到發生碰撞-1
     //void OnColliderEnter(Collision collision)
@@ -82,13 +82,14 @@ public class ThinMonsterBehavior1 : MonoBehaviour
         {
             bDeath = true;
             collider_Prop.enabled = false;
+            this.gameObject.SetActive(false);
             //將所有碰撞體關閉
             Collider[] cols = GetComponentsInChildren<Collider>();
             foreach (var item in cols)
             {
                 item.enabled = false;
             }
-
+            Destroy(this.gameObject);
         }
 
         //死亡之後的動作
