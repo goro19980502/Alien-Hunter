@@ -5,7 +5,7 @@ using UnityEngine;
 public class DamageBehavior : MonoBehaviour
 {
     //傷害值
-    public int Damage = 0;
+    public int Damage = 1;
     private MonsterBehavior monsterBehavior;
 
     private void Start()

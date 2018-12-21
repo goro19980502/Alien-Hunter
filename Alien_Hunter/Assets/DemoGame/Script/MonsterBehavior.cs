@@ -23,7 +23,9 @@ public class MonsterBehavior : MonoBehaviour
     //生命值
     public int HealthPoint = 1;
     //死亡布林值
-    private bool bDeath = false;    
+    public bool bDeath = false;
+
+    public CountScore countScore;
 
     //動畫Hash碼
     private static int state_Idle = Animator.StringToHash("Idle");
@@ -35,6 +37,7 @@ public class MonsterBehavior : MonoBehaviour
     {
         meshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
+        countScore = GameObject.Find("Score").GetComponent<CountScore>();
 
         Target = GameObject.FindGameObjectWithTag("Player");
 
@@ -49,7 +52,8 @@ public class MonsterBehavior : MonoBehaviour
     {
         yield return new WaitForSeconds(3.0f);
         Instantiate(RefExplosion, transform.position, transform.rotation);
-        this.gameObject.SetActive(false);
+        countScore.scoreCount(1);
+        gameObject.SetActive(false);
         Destroy(gameObject);
 
     }
@@ -57,18 +61,18 @@ public class MonsterBehavior : MonoBehaviour
     public void OnDamage(int Dmg)
     {
         HealthPoint -= Dmg;
-        animator.SetTrigger("Death");
+        //animator.SetTrigger("Death");
         //       Destroy(this);
         //        Application.LoadLevel(1);
     }
     //被子彈打到發生碰撞-1
-    void OnColliderEnter(Collision collision)
-    {
-        Debug.Log("death");
+    //void OnColliderEnter(Collision collision)
+    //{
+    //    Debug.Log("death");
 
-        OnDamage(1);
-        Destroy(gameObject);
-    }
+    //    OnDamage(1);
+    //    Destroy(gameObject);
+    //}
 
     void Update ()
     {
@@ -84,16 +88,14 @@ public class MonsterBehavior : MonoBehaviour
             {
                 item.enabled = false;
             }
-            animator.SetTrigger("Death");
-            gameObject.SetActive(false);
-            Destroy(this.gameObject);
+
         }
 
         //死亡之後的動作
         if (bDeath)
         {
-            GameObject tmpGM = GameObject.FindGameObjectWithTag("GameModeTag");
-            tmpGM.GetComponent<GameMode>().SetScore(10);
+            //GameObject tmpGM = GameObject.FindGameObjectWithTag("GameModeTag");
+            //tmpGM.GetComponent<GameMode>().SetScore(10);
 
             HealthPoint = -99;
 

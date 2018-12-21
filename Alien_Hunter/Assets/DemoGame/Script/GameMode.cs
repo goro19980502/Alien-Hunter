@@ -9,7 +9,8 @@ public class GameMode : MonoBehaviour
     public Image TimeBar;
     public Text Text_Score;
     public MessageBehavior messageBehavior;
-
+    public CountScore countScore;
+    public timecount timecount;
     [Header("Time")]
     //時間設定值
     public int Timer = 60;
@@ -34,7 +35,7 @@ public class GameMode : MonoBehaviour
     //分數變數
     private int Score = 0;
     private bool bGameOver = false;
-
+    
     void Start ()
     {
         pathMove = GetComponent<PathMove>();
@@ -87,8 +88,8 @@ public class GameMode : MonoBehaviour
             }
             else // 時間到
             {
-                bGameOver = true;
-                messageBehavior.SetMessage("遊戲結束!!");
+/*                bGameOver = true;
+                //messageBehavior.SetMessage("遊戲結束!!");
 
                 //將場上所有怪物擊斃
                 MonsterBehavior[] mb = FindObjectsOfType<MonsterBehavior>();
@@ -96,7 +97,7 @@ public class GameMode : MonoBehaviour
                 {
                     item.OnDamage(10);
                 }
-                StopAllCoroutines();
+                StopAllCoroutines();*/
             }
         }
         else
@@ -104,6 +105,11 @@ public class GameMode : MonoBehaviour
             //關閉關卡重置
             //            StartCoroutine(DelayRestart());
         }
+ /*       if(countScore.sum == 15 || timecount.timeInt == 170)
+        {
+            float rotY = Random.Range(0, 359);
+            Instantiate(RefBoss, pathMove.GetRandomVector(), Quaternion.Euler(0, rotY, 0));
+        }*/
     }
 
     IEnumerator DelayRestart()
@@ -134,5 +140,6 @@ public class GameMode : MonoBehaviour
             Score += amonut;
             Text_Score.text = Score.ToString();
         }
+        
     }
 }

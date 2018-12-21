@@ -8,13 +8,14 @@ public class timecount : MonoBehaviour {
     public float startTime;
     public Text text;
     string s;
+    public int timeInt;
 	void Update () {
         showtime();
 	}
     void showtime()
     {
         float nowTime = Time.time - startTime;
-        int timeInt = 180 - (int)nowTime;
+        timeInt = 180 - (int)nowTime;
         Debug.Log("執行時間"+timeInt);
         s = timeInt.ToString();
         text.text = s;
