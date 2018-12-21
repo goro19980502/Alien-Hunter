@@ -28,7 +28,7 @@ public class ThinMonsterBehavior1 : MonoBehaviour
     public CountScore countScore;
 
     //動畫Hash碼
-    private static int state_Idle = Animator.StringToHash("Wait");
+    private static int state_Idle = Animator.StringToHash("Idle");
     private static int state_Walk = Animator.StringToHash("Run");
     private static int state_Attack = Animator.StringToHash("Attack");
     private static int state_Death = Animator.StringToHash("Death");

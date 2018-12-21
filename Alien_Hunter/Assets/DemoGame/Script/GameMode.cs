@@ -18,7 +18,9 @@ public class GameMode : MonoBehaviour
     private float timerCount;
     //最大時間變數
     private float TimerLimit;
-
+    [Header("ThinMonster")]
+    //瘦怪
+    public GameObject RefThinMonster;
     [Header("Monster")]
     //怪物來源參考
     public GameObject RefMonster;
@@ -53,6 +55,7 @@ public class GameMode : MonoBehaviour
 
         float rotY = Random.Range(0, 359);
         Instantiate(RefMonster, pathMove.GetRandomVector(), Quaternion.Euler(0, rotY, 0));
+        Instantiate(RefThinMonster, pathMove.GetRandomVector(), Quaternion.Euler(0, rotY, 0));
 
         StartCoroutine(SpawnMonster());
     }
