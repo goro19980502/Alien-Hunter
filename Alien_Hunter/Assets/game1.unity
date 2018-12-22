@@ -939,7 +939,7 @@ Prefab:
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 194
+      value: 926
       objectReference: {fileID: 0}
     - target: {fileID: 224000012623161658, guid: d46cf6b1ad9d84a48ae7548a2a6b41b3,
         type: 2}
@@ -26355,15 +26355,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 18
       objectReference: {fileID: 0}
-    - target: {fileID: 1129266768098950, guid: fc6c0d3ae739d3d46aa4531a6daf746e, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 114974314551515668, guid: fc6c0d3ae739d3d46aa4531a6daf746e,
         type: 2}
       propertyPath: Target
       value: 
       objectReference: {fileID: 1570313541}
+    - target: {fileID: 114974314551515668, guid: fc6c0d3ae739d3d46aa4531a6daf746e,
+        type: 2}
+      propertyPath: countScore
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc6c0d3ae739d3d46aa4531a6daf746e, type: 2}
   m_IsPrefabAsset: 0
@@ -26467,7 +26468,7 @@ MonoBehaviour:
   collider_Prop: {fileID: 74665918}
   HealthPoint: 1
   bDeath: 0
-  countScore: {fileID: 0}
+  countScore: {fileID: 1206480934}
 --- !u!4 &1481152181
 Transform:
   m_ObjectHideFlags: 0

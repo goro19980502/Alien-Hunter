@@ -1313,6 +1313,8 @@ MonoBehaviour:
     type: 2}
   collider_Prop: {fileID: 65961734700607004}
   HealthPoint: 1
+  bDeath: 0
+  countScore: {fileID: 0}
 --- !u!135 &135700772707351074
 SphereCollider:
   m_ObjectHideFlags: 1
