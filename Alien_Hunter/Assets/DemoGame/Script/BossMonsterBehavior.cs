@@ -142,17 +142,5 @@ public class BossMonsterBehavior : MonoBehaviour
         //    animator.SetBool("Attack", false);
         //}
     }
-    public void OnTriggerStay(Collider Attack)
-    {
-        if(Attack.gameObject.tag == "Player")
-        {
-            if (this.gameObject == TriggerBoxRight)
-                animator.SetBool("AttackRight", true);
-            else if (this.gameObject == TriggerBoxMid)
-                animator.SetBool("AttackMid", true);
-            else if (this.gameObject == TriggerBoxLeft)
-                animator.SetBool("AttackLeft", true);
-        }
-    }
     
 }
