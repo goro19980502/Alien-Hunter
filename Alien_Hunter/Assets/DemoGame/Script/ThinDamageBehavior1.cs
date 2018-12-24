@@ -6,9 +6,9 @@ public class ThinDamageBehavior1 : MonoBehaviour
 {
     //傷害值
     public int Damage = 1;
-    private ThinMonsterBehavior1 monsterBehavior;
+    public ThinMonsterBehavior1 monsterBehavior;
 
-    private void Start()
+    void Start()
     {
         monsterBehavior = GetComponentInParent<ThinMonsterBehavior1>();
     }

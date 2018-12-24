@@ -32,6 +32,15 @@ public class BulletBehavior : MonoBehaviour
                 collision.gameObject.GetComponent<DamageBehavior>().GiveDamage();
             }
 
+            if (collision.gameObject.GetComponent<ThinDamageBehavior1>())
+            {
+                collision.gameObject.GetComponent<ThinDamageBehavior1>().GiveDamage();
+            }
+            if (collision.gameObject.GetComponent<BossDamageBehavior>())
+            {
+                collision.gameObject.GetComponent<BossDamageBehavior>().GiveDamage();
+            }
+
             Destroy(gameObject);
         }
         

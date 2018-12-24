@@ -7,6 +7,12 @@ public class CountScore : MonoBehaviour {
 
     public int sum = 0;
     public Text text;
+    public GameObject GameWinner;
+    public timecount timecount;
+    void Start()
+    {
+        timecount = GameObject.Find("Time").GetComponent<timecount>();    
+    }
     void Update()
     {
         if(sum >= 15)
@@ -20,6 +26,14 @@ public class CountScore : MonoBehaviour {
     }
     void OnWinner()
     {
+        timecount.rest();
+        GameWinner.SetActive(true);
+        StartCoroutine(DelayDestory());
         Application.LoadLevel(1);
     }
+    IEnumerator DelayDestory()
+    {
+        yield return new WaitForSeconds(10f);
+    }
+
 }

@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class timecount : MonoBehaviour {
+public class timecount1 : MonoBehaviour {
 
     public float startTime;
     public Text text;
     string s;
     public int timeInt;
-    public GameObject GameOver;
-	void Update () {
+    //public GameObject GameOverText;
+    //public GameObject TimeText;
+    void Update () {
         showtime();
 	}
     void showtime()
@@ -22,10 +23,13 @@ public class timecount : MonoBehaviour {
         text.text = s;
         if (timeInt == 0)
         {
-            GameOver.SetActive(true);
-            StartCoroutine(DelayDestory());
-            Application.LoadLevel(1);
+            s = "0";
+            //GameOverText.SetActive(true);
+            OnEnableStop();
+            Application.LoadLevel(2);
+            //TimeText.SetActive(false);
         }
+            
             
     }
     //更新遊戲時間
@@ -43,9 +47,4 @@ public class timecount : MonoBehaviour {
     {
         Time.timeScale = 1f;
     }
-    IEnumerator DelayDestory()
-    {
-        yield return new WaitForSeconds(80f);
-    }
-
 }

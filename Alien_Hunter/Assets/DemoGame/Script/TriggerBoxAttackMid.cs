@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class TriggerBox : MonoBehaviour {
-
+using UnityEngine.SceneManagement;
+using UnityEngine.AI;
+public class TriggerBoxAttackMid : MonoBehaviour
+{
     public Animator animator;
     public void OnTriggerStay(Collider Attack)
     {

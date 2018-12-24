@@ -37,7 +37,7 @@ public class ThinMonsterBehavior1 : MonoBehaviour
     {
         meshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
-//        countScore = GameObject.Find("Score").GetComponent<CountScore>();//抓取 Score 的 Component
+        countScore = GameObject.Find("Score").GetComponent<CountScore>();//抓取 Score 的 Component
 
 //        Target = GameObject.FindGameObjectWithTag("Player");
 
@@ -61,19 +61,19 @@ public class ThinMonsterBehavior1 : MonoBehaviour
     public void OnDamage(int Dmg)
     {
         HealthPoint -= Dmg;
-        animator.SetTrigger("Death");
-        Destroy(this);
+    //    animator.SetTrigger("Death");
+    //    Destroy(this);
  
-        //       Application.LoadLevel(1);
+    //    //       Application.LoadLevel(1);
     }
-    //被子彈打到發生碰撞-1
-    void OnColliderEnter(Collision collision)
-    {
-        Debug.Log("death");
+    ////被子彈打到發生碰撞-1
+    //void OnColliderEnter(Collision collision)
+    //{
+    //    Debug.Log("death");
 
-        OnDamage(1);
-        Destroy(gameObject);
-    }
+    //    OnDamage(1);
+    //    Destroy(gameObject);
+    //}
     
     void Update ()
     {
@@ -90,7 +90,7 @@ public class ThinMonsterBehavior1 : MonoBehaviour
             {
                 item.enabled = false;
             }
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
 
         //死亡之後的動作

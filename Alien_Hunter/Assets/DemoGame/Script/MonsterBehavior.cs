@@ -33,11 +33,17 @@ public class MonsterBehavior : MonoBehaviour
     private static int state_Attack = Animator.StringToHash("Attack");
     private static int state_Death = Animator.StringToHash("Death");
 
+    private void Awake()
+    {
+        countScore = GameObject.Find("Score").GetComponent<CountScore>();
+    }
+
     void Start ()
     {
+
         meshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
-        countScore = GameObject.Find("Score").GetComponent<CountScore>();
+
 
         Target = GameObject.FindGameObjectWithTag("Player");
 
