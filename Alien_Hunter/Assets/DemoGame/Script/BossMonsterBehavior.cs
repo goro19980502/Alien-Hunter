@@ -51,6 +51,10 @@ public class BossMonsterBehavior : MonoBehaviour
         Destroy(this.gameObject);
 
     }
+    IEnumerator DelayAnimator()
+    {
+        yield return new WaitForSeconds(3.0f);
+    }
 
     public void OnDamage(int Dmg)
     {
@@ -66,12 +70,18 @@ public class BossMonsterBehavior : MonoBehaviour
             game.SetActive(false);
         }
     }
-
+     
     void Update ()
     {
-        animator.SetBool("AttackRight", true);
-        animator.SetBool("AttackLeft", true);
+
         animator.SetBool("AttackMid", true);
+        DelayAnimator();
+        animator.SetBool("AttackRight", true);
+        DelayAnimator();
+        animator.SetBool("AttackLeft", true);
+        DelayAnimator();
+
+
         Debug.Log("healthPoint" + HealthPoint);
         //生命值低於0時, 執行死亡行為
         if (HealthPoint <= 0 && HealthPoint >= -10)
